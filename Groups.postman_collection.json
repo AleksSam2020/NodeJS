@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "2495e109-8a0e-4a79-b65c-a30064bc89c4",
+		"name": "Groups",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create group",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Group8",
+							"type": "text"
+						},
+						{
+							"key": "permissions",
+							"value": "READ",
+							"type": "text"
+						},
+						{
+							"key": "permissions",
+							"value": "SHARE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user to group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "groupId",
+							"value": "f2c88e95-944f-4655-ad68-60c4257a0df7",
+							"type": "text"
+						},
+						{
+							"key": "userIds",
+							"value": "f2c88e95-933f-4655-ad68-60c4257a0df7",
+							"type": "text"
+						},
+						{
+							"key": "userIds",
+							"value": "64b82c83-8110-47fe-9745-cba43a54a790",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/groups/f2c88e95-944f-4655-ad68-60c4257a0df7/add-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"f2c88e95-944f-4655-ad68-60c4257a0df7",
+						"add-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all groups",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "get group by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "update group",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Group7",
+							"type": "text"
+						},
+						{
+							"key": "permissions",
+							"value": "DELETE",
+							"type": "text"
+						},
+						{
+							"key": "permissions",
+							"value": "SHARE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/groups/f2c88e95-933f-4677-ad68-60c4257a0df7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"groups",
+						"f2c88e95-933f-4677-ad68-60c4257a0df7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/groups/64b82c83-8220-27fe-9745-cba43a54a790",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"groups",
+						"64b82c83-8220-27fe-9745-cba43a54a790"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
